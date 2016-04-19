@@ -4,7 +4,7 @@ DyForm is a JQuery Plugin to make normal HTML-Forms automaticly fluffy with AJAX
 # Install
 Download the last DyForm.js from Github and bind it in your source:
 
-    <script src="myscripts.js"></script>
+    <script src="dyForm.min.js"></script>
 
 To easy use it at all Forms use the following Code:
 
