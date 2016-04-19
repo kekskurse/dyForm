@@ -25,11 +25,18 @@ $.fn.dyForm = function(ok, error) {
 			if(ok==undefined)
 			{
 				var json = false;
-				try {
-				    json = $.parseJSON(msg);
-				} catch (e) {
-					//console.log(e);
-				    // not json
+				if(typeof msg === 'object' && msg["status"] != undefined)
+				{
+					json = msg;
+				}
+				else {
+					try {
+					    json = $.parseJSON(msg);
+					} catch (e) {
+						console.log(e);
+						console.log(msg);
+					    // not json
+					}
 				}
 				if(json===false)
 				{
